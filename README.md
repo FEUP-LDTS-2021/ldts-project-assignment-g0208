@@ -1,4 +1,4 @@
-# LDTS_T06_G01 - OVERKILL
+# LDTS_T02_G08 -> SpaceWars
 
 ## Game Description
 
