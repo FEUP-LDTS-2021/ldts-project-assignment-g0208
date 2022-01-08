@@ -1,4 +1,4 @@
-package SpaceWars.GUI;
+package SpaceWars.Gui;
 
 public final class GlobalConfigs {
     public final static int TERMINAL_WIDTH = 512;
