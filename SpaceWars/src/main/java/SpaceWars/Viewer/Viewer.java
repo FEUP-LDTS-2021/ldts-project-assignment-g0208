@@ -16,7 +16,7 @@ public abstract class Viewer <T> {
     }
 
     public void draw(GUI gui) throws IOException {
-        drawElements(gui);
+        //drawElements(gui);
         gui.refresh();
     }
 
