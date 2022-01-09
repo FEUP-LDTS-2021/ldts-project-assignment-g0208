@@ -1,5 +1,6 @@
 package SpaceWars.GUI;
 
+import SpaceWars.Model.Position;
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
@@ -12,6 +13,7 @@ import com.googlecode.lanterna.terminal.swing.SwingTerminalFontConfiguration;
 
 import java.awt.*;
 import java.io.IOException;
+import java.util.List;
 
 import static com.googlecode.lanterna.screen.Screen.RefreshType.AUTOMATIC;
 
@@ -42,9 +44,18 @@ public class LanternGUI implements GUI {
         return screen;
     }
 
+    public void draw(Position position, List<String> appearance, String hexColor, String backgroundColor) throws IOException {
+
+    }
+
     @Override
     public void drawbackground() {
        fill("#D3D3D3");
+    }
+
+    @Override
+    public void drawElement() {
+
     }
 
     public void fill(String color) {

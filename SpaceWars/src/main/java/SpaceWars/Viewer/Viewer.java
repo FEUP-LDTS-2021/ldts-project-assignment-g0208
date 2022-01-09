@@ -4,7 +4,7 @@ import SpaceWars.GUI.GUI;
 
 import java.io.IOException;
 
-public abstract class Viewer <T>{
+public abstract class Viewer <T> {
     private final T model;
 
     public Viewer(T model) {
@@ -21,3 +21,4 @@ public abstract class Viewer <T>{
     }
 
     protected abstract void drawElements(GUI gui) throws IOException;
+}
