@@ -9,6 +9,31 @@ This project was developed by Ant√≥nio Campelo(up201704987@up.pt), Edgar Louren√
 
 For a more detailed version of this description click [here](./Documentos/README.md).
 
+## How to Play
+You can move the character using 
+- `W` to go up
+- `S` to go down
+- `L` to fire.
+
+The main objective is to eliminate your enemies to save your ship and move up level.
+
+## Planned Features
+The Features are being implemented, but we were busy with works and a bit late on the implementation for the time being but we are getting all the features up and building to get such as:
+
+- [ ] Starting Menu
+
+- [ ] Game Over Menu
+
+- [ ] Level-Up Menu
+
+- [ ] Space Movement
+
+- [ ] Enemies with Movements(Fire and move through the screen)
+
+- [ ] Energy System
+
+- [ ] Multiple Levels
+
 ## Screenshots
 ### Game preview
 ### Menus
