@@ -43,7 +43,7 @@ public class LanternGUI implements GUI {
     }
 
     @Override
-    public void background() {
+    public void drawbackground() {
        fill("#D3D3D3");
     }
 
