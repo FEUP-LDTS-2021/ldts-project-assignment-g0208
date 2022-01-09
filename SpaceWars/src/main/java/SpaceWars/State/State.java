@@ -27,10 +27,11 @@ public abstract class State <T> {
     }
 
     public void step(Game game, GUI gui, long time) throws IOException {
-        GUI.PressedKey action =  gui.getKeyInput();
+        GUI.PressedKey action = gui.getKeyInput();
         controller.step(game, action, time);
         viewer.draw(gui);
     }
 
+    //public abstract void processKey(GUI.PressedKey keyP);
 
 }

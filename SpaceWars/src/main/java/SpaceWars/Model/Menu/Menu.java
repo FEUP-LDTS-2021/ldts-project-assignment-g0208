@@ -1,15 +1,10 @@
 package SpaceWars.Model.Menu;
 
 import SpaceWars.Game;
-import SpaceWars.Controller.Command.ButtonCommand.ExitCommand;
-import SpaceWars.Controller.Command.ButtonCommand.StartCommand;
-import SpaceWars.GUI.FileReader;
-import SpaceWars.Model.Position;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 
 public abstract class Menu {
     protected List<Button> options;
@@ -22,15 +17,15 @@ public abstract class Menu {
         selected = 0;
     }
 
-    public void addOption(Button newButton) {
+    public void addOption(Button newButton){
         options.add(newButton);
     }
 
-    public List<Button> getOptions() {
+    public List<Button> getOptions(){
         return this.options;
     }
 
-    public int getNumberOptions() {
+    public int getNumberOptions(){
         return this.options.size();
     }
 
@@ -44,16 +39,15 @@ public abstract class Menu {
 
     public void nextOption() {
         getSelectedButton().setActive(false);
-        selected ++;
+        selected++;
         getSelectedButton().setActive(true);
     }
 
-    public void previousOption() {
+    public void previousOption(){
         getSelectedButton().setActive(false);
-        selected --;
-        if (selected < 0) {
+        selected--;
+        if(selected < 0)
             selected = options.size() - 1;
-        }
         getSelectedButton().setActive(true);
     }
 }

@@ -1,8 +1,8 @@
-package SpaceWars.Controller.Command.ButtonCommand;
+package SpaceWars.Controller.Command.buttonCommand;
 
 import SpaceWars.Game;
 
-public class ExitCommand extends ButtonCommand {
+public class ExitCommand extends ButtonCommand{
     public ExitCommand(Game game) {
         super(game);
     }
