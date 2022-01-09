@@ -32,6 +32,4 @@ public abstract class State <T> {
         viewer.draw(gui);
     }
 
-    //public abstract void processKey(GUI.PressedKey keyP);
-
 }

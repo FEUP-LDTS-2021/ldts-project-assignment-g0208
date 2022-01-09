@@ -66,17 +66,6 @@ public class LanternaGUI implements GUI{
         else return PressedKey.OTHER;
     }
 
-    public void draw(Position position, List<String> appearance, String hexColor,String backgroundColor) {
-        TextGraphics graphics = screen.newTextGraphics();
-        graphics.setBackgroundColor(TextColor.Factory.fromString(backgroundColor));
-        graphics.setForegroundColor(TextColor.Factory.fromString(hexColor));
-        for(int i=0;i<appearance.size();i++){
-            if(appearance.get(i) != " "){
-                graphics.putString(position.getX(),GlobalConfigs.TERMINAL_HEIGHT-1-position.getY()+i,appearance.get(i),SGR.BOLD);
-            }
-        }
-    }
-
     public void drawMenuBackground(){
         fillBackground("#3d3d3d");
     }

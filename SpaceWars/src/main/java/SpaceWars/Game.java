@@ -24,12 +24,6 @@ public class Game {
         game.start();
     }
 
-    public void changeState(State state){
-        this.state = state;
-    }
-
-    public State getState(){ return state;}
-
     public void exit(){
         exit = true;
     }
