@@ -58,10 +58,9 @@ The pattern used was a facade pattern. A facade provides a simplified interface 
 
 #### Implementation
 
-//UML
+![UML Lanterna](uml/Interface.png);
 
 Classes used for this pattern :
->Game
 >GUI
 >LanternaGUI
 
@@ -86,7 +85,7 @@ A game loop is always running during the game, and each iteration the user input
 
 #### Implementation
 
-//UML
+![UML LOOP](uml/Loop.png);
 
 #### Consequences
 
@@ -105,11 +104,10 @@ In order for the movement to be simple and not cause any unecessary complexity, 
 The command pattern "is a behavioral design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event at a later time".
 
 #### Implementation 
-	
-//UML
-Classes used for this pattern :
-//
 
+![UML MOVE](uml/Command.png)
+
+Classes used for this pattern :
 > Input handler
 > Direction movement
 
@@ -131,9 +129,7 @@ The command pattern "is a behavioral design pattern in which an object is used t
 
 #### Implementation 
 
-//UML
-Classes used for this pattern :
-//
+![UML MOVE](uml/ButtonCommand.png)
 
 >Button command
 
