@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="spacewars.controller.MenuControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-01-17T14:47:09" hostname="MBP-de-Edgar" time="0.022">
+  <properties/>
+  <testcase name="move()" classname="spacewars.controller.MenuControllerTest" time="0.004"/>
+  <testcase name="click()" classname="spacewars.controller.MenuControllerTest" time="0.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
