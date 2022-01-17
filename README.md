@@ -13,26 +13,26 @@ For a more detailed version of this description click [here](./Documentos/README
 You can move the character using 
 - `W` to go up
 - `S` to go down
-- `L` to fire.
+- `Space` to fire.
 
 The main objective is to eliminate your enemies to save your ship and move up level.
 
 ## Planned Features
 The Features are being implemented, but we were busy with works and a bit late on the implementation for the time being but we are getting all the features up and building to get such as:
 
-- [ ] Starting Menu
+- [X] Starting Menu
 
-- [ ] Game Over Menu
+- [X] Game Over Menu
 
-- [ ] Level-Up Menu
+- [X] Level-Up Menu
 
-- [ ] Space Movement
+- [X] Space Movement
 
-- [ ] Enemies with Movements(Fire and move through the screen)
+- [X] Enemies with Movements(Fire and move through the screen)
 
-- [ ] Energy System
+- [X] Energy System
 
-- [ ] Multiple Levels
+- [X] Multiple Levels
 
 ## Screenshots
 ### Game preview
