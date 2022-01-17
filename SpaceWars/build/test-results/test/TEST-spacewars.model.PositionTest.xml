@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="spacewars.model.PositionTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-01-17T14:47:09" hostname="MBP-de-Edgar" time="0.005">
+  <properties/>
+  <testcase name="positionEquals()" classname="spacewars.model.PositionTest" time="0.0"/>
+  <testcase name="getDown()" classname="spacewars.model.PositionTest" time="0.0"/>
+  <testcase name="getLeft()" classname="spacewars.model.PositionTest" time="0.0"/>
+  <testcase name="getUp()" classname="spacewars.model.PositionTest" time="0.001"/>
+  <testcase name="getRandomNeighbour()" classname="spacewars.model.PositionTest" time="0.001"/>
+  <testcase name="getRight()" classname="spacewars.model.PositionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
