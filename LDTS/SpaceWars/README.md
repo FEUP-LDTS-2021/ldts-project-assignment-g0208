@@ -18,9 +18,11 @@ You can move the character using
 The main objective is to eliminate your enemies to save your ship and move up level.
 
 ## Planned Features
-The Features are being implemented, but we were busy with works and a bit late on the implementation for the time being but we are getting all the features up and building to get such as:
+The Features all are implemented, despite of being a game simple to handle we implemented all the features using the architetural and design pattern referenced in the intermediate delivery.
 
 - [X] Starting Menu
+
+- [X] Loading Level Menu 
 
 - [X] Game Over Menu
 
