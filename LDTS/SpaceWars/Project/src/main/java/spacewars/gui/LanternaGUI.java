@@ -57,7 +57,7 @@ public class LanternaGUI implements GUI {
         terminalFactory.setTerminalEmulatorFontConfiguration(fontConfig);
         Terminal terminal = terminalFactory.createTerminal();
         ((AWTTerminalFrame)terminal).setCursor(new Cursor(DEFAULT_CURSOR));
-        Image image = Toolkit.getDefaultToolkit().getImage("");
+        Image image = Toolkit.getDefaultToolkit().getImage("src/main/resources/cursor.png");
         ((AWTTerminalFrame)terminal).setCursor(Toolkit.getDefaultToolkit().createCustomCursor(image, new Point(32,22), "cursor1"));
         return terminal;
     }
