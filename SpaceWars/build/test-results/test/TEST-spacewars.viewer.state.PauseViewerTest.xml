@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="spacewars.viewer.state.PauseViewerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-17T14:47:09" hostname="MBP-de-Edgar" time="0.004">
-  <properties/>
-  <testcase name="draw()" classname="spacewars.viewer.state.PauseViewerTest" time="0.004"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
