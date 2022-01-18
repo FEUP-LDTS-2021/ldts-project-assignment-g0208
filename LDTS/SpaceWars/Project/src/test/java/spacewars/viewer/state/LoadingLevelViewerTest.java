@@ -31,6 +31,6 @@ class LoadingLevelViewerTest {
     void draw() throws IOException {
         loadingLevelViewer.draw();
 
-        Mockito.verify(gui, Mockito.times(1)).drawTitle(new Position(2,8),"LOADING NEXT LEVEL !", "#000000","#FFFFFF");
+        Mockito.verify(gui, Mockito.times(1)).drawTitle(new Position(2,8),"LOADING NEXT BATTLE", "#000000","#FFFFFF");
     }
 }

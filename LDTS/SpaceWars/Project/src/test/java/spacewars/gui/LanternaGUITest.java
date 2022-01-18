@@ -35,7 +35,7 @@ class LanternaGUITest {
         String color = "#000000";
         gui.drawPlayer(position,color);
 
-        Mockito.verify(tg, Mockito.times(1)).putString(position.getX(), position.getY(), "m");
+        Mockito.verify(tg, Mockito.times(1)).putString(position.getX(), position.getY(), "c");
     }
 
     @Test
@@ -53,7 +53,7 @@ class LanternaGUITest {
         String color = "#000000";
         gui.drawTF(position,color);
 
-        Mockito.verify(tg, Mockito.times(1)).putString(position.getX(), position.getY(), "q");
+        Mockito.verify(tg, Mockito.times(1)).putString(position.getX(), position.getY(), "t");
     }
 
     @Test
@@ -62,7 +62,7 @@ class LanternaGUITest {
         String color = "#000000";
         gui.drawSD(position,color);
 
-        Mockito.verify(tg, Mockito.times(1)).putString(position.getX(), position.getY(), "o");
+        Mockito.verify(tg, Mockito.times(1)).putString(position.getX(), position.getY(), "s");
     }
 
     @Test
@@ -70,7 +70,7 @@ class LanternaGUITest {
         Position position = new Position(3,5);
         String color = "#000000";
         gui.drawDS(position,color);
-        Mockito.verify(tg, Mockito.times(1)).putString(position.getX(), position.getY(), "p");
+        Mockito.verify(tg, Mockito.times(1)).putString(position.getX(), position.getY(), "d");
     }
 
     @Test

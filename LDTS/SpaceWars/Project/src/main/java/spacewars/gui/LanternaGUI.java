@@ -85,7 +85,7 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawPlayer(Position position, String color) {
-        drawText(screen.newTextGraphics() , position, "m", color);
+        drawText(screen.newTextGraphics() , position, "c", color);
     }
 
     @Override
@@ -97,17 +97,17 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawTF(Position position, String color) {
-        drawText( screen.newTextGraphics() , position, "q", color);
+        drawText( screen.newTextGraphics() , position, "t", color);
     }
 
     @Override
     public void drawDS(Position position, String color) {
-        drawText( screen.newTextGraphics() , position, "p", color);
+        drawText( screen.newTextGraphics() , position, "d", color);
     }
 
     @Override
     public void drawSD(Position position, String color) {
-        drawText( screen.newTextGraphics() , position, "o", color);
+        drawText( screen.newTextGraphics() , position, "s", color);
     }
 
     @Override
@@ -142,7 +142,7 @@ public class LanternaGUI implements GUI {
         int index = 0;
         drawText(textGraphics,new Position(index,height),String.valueOf(energy) ,"#FFFFFF");
         index += String.valueOf(energy).length();
-        drawText(textGraphics,new Position(index,height),"a" ,"#FF0000");
+        drawText(textGraphics,new Position(index,height),"energy" ,"#FF0000");
     }
 
     @Override

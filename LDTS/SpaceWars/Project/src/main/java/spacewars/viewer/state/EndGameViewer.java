@@ -21,9 +21,9 @@ public class EndGameViewer extends StateViewer {
         try {
             gui.drawRectangle(gui.createTextGraphics(), "#000000", 15, 5, new Position(6, 10));
             if (won)
-                gui.drawTitle(new Position(2, 12), "YOU WON THE BATTLE", "#000000", "#FFFFFF");
+                gui.drawTitle(new Position(2, 12), "YOU WON THE WAR", "#000000", "#FFFFFF");
             else
-                gui.drawTitle(new Position(2, 12), "YOU LOST THE BATTLE", "#000000", "#FFFFFF");
+                gui.drawTitle(new Position(2, 12), "YOU LOST THE WAR", "#000000", "#FFFFFF");
             gui.refresh();
 
             TimeUnit.MILLISECONDS.sleep(2000);

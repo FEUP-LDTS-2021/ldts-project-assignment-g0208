@@ -39,7 +39,7 @@ class EndGameViewerTest {
     void draw() throws IOException {
         endGameViewer.draw();
         Mockito.verify(tg, Mockito.times(1)).fillRectangle(new TerminalPosition(6,10), new TerminalSize(15,5),' ');
-        Mockito.verify(tg, Mockito.times(1)).putString(2,12,"YOU WON THE BATTLE");
+        Mockito.verify(tg, Mockito.times(1)).putString(2,12,"YOU WON THE WAR");
 
     }
 }

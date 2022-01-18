@@ -31,11 +31,23 @@ public class LoadingLevelViewer extends StateViewer {
         try {
             TimeUnit.MILLISECONDS.sleep(1000);
 
-            drawText(new Position(2, 8), "LOADING NEXT LEVEL !", "#000000", "#FFFFFF");
+            drawText(new Position(2, 8), "LOADING NEXT BATTLE", "#000000", "#FFFFFF");
 
             TimeUnit.MILLISECONDS.sleep(100);
 
-            drawText(new Position(2, 14), "THE NEXT BATTLE WILL START", "#000000", "#FFFFFF");
+            String text1 = "THE BATTLE WILL START ";
+            String text2 = "LEVEL " + level + "...";
+            for(int i = 0; i < text1.length(); i++) {
+                drawText(new Position(2 + i, 15), text1.charAt(i) + "", "#000000", "#FFFFFF");
+                gui.refresh();
+                TimeUnit.MILLISECONDS.sleep(35);
+            }
+
+            for(int i = 0; i < text2.length(); i++) {
+                drawText(new Position(2 + i, 17), text2.charAt(i) + "", "#000000", "#FFFFFF");
+                gui.refresh();
+                TimeUnit.MILLISECONDS.sleep(35);
+            }
 
             TimeUnit.MILLISECONDS.sleep(2000);
 
@@ -44,5 +56,3 @@ public class LoadingLevelViewer extends StateViewer {
         }
     }
 }
-
-
