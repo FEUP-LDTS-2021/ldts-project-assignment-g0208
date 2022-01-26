@@ -75,6 +75,44 @@ In SpaceWars, we store the observers in the main class(Game Class) and change th
 
 #### Problem in Context
 
+A level in SpaceWars consists in an junction of a player(SpaceShip) and a number of enemies, differente from level to level, instead of building level by level, we have a Level Loader that consists in read from a file and inserts into the Builder, that we called LevelBuilder the needed elements to construct the level. This implementation makes it possible to create only the specific elements to the level and generate only the level that the user is.
+
+#### The Pattern
+
+The **Factory Method** and **Builder** are two creational design patterns, the first one provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. The second, allows you to construct complex objects step by step making a simpler code.
+
+#### Implementation
+
+A factory is resposible for constructing the whole but the workers are the ones that actually execute the job. In this case the LevelBuilder is the factory and its subclasses represent the workers. In the implementation, the LevelBuilder is an abstract class which knows how to construct a level, however only its subclasses supply the necessary components of the level. The LevelLoader is one of the subclasses that consists in a worker capable of reading different levels from different files. The level pattern is implemented in all of the classes show in the figure 3.
+
+![Level](uml/Level.png)
+*Fig 3 -> Level Builder and Loader*
+
+#### Consequences
+
+- Open/Closed Principals. Can introduce new types of enemies without breaking existing client code.
+- Avoid tight coupling between the creator and the products.
+- Can construct level step by step, defer run steps recursively.
+
+### Types of Command
+
+#### Problem in Context
+
+The diversity between buttons was not significant for the objective of the game. In the course of the building of the project, the numbers of buttons had to be generalise. That said and kwoning that a good design of software is often based on the principle of separation of concerns.
+
+#### The Pattern
+
+In SpaceWars we applied the **Command** also kwonw as Action Pattern.This pattern turns a request into a stand-alone object that contains all information about the request.
+
+#### Implementation
+
+All the Button Classes are in a single Button with a command attribute. These commands implement the same interface having an execution method that takes no parameters. This interface lets you use various commands with the same request, without coupling it to concrete commands. With that, you can switch command objects linked to the sender, effectively changing the sender's behaviour.
+
+![Buttons](uml/ButtonCommand.png)
+*Fig 4 -> Button - Command *
+
+
+
 
 
 

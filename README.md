@@ -7,7 +7,7 @@ The variety of levels will have increased difficulty with different strategic en
 
 This project was developed by António Campelo(up201704987@up.pt), Edgar Lourenço(up201604910@up.pt) and José Rodrigues(up201809590@up.pt)
 
-For a more detailed version of this description click [here](./Documentos/README.md).
+For a more detailed version of this description click [here](LDTS/SpaceWars/Documentos/README.md).
 
 ## How to Play
 You can move the character using 
