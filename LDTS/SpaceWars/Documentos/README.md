@@ -109,9 +109,22 @@ In SpaceWars we applied the **Command** also kwonw as Action Pattern.This patter
 All the Button Classes are in a single Button with a command attribute. These commands implement the same interface having an execution method that takes no parameters. This interface lets you use various commands with the same request, without coupling it to concrete commands. With that, you can switch command objects linked to the sender, effectively changing the sender's behaviour.
 
 ![Buttons](uml/ButtonCommand.png)
-*Fig 4 -> Button - Command *
+*Fig 4 -> Button - Command*
 
+### GUI
 
+#### Problem in Context
+
+SpaceWars is aiming for a structured and unstable code, that means easy to change the code. The lanterna library contains various functions that aren´t useful or important to write (**Interface Segregation Principle violation**). Also, if using the raw library, SpaceWars would be directly depending on a low level module. This is what we called of **(DIP) Dependecy Inversion Principle**. The need to implement an interface that solves the problem was created.
+
+#### The Pattern
+
+We have applied in SpaceWars the **Facade Pattern**, a simple interface to a complex subsystem which contains moving parts, allowing us to only include features that are important to the game.
+
+#### Implementation
+
+![Lanterna](uml/Lanterna.png)
+*Fig 5 -> Lanterna Implementation*
 
 
 
