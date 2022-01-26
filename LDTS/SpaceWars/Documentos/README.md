@@ -7,133 +7,77 @@ The variety of levels will have increased difficulty with different strategic en
 
 This project was developed by António Campelo(up201704987@up.pt), Edgar Lourenço(up201604910@up.pt) and José Rodrigues(up201809590@up.pt)
 
-## Planned Features
+## Implemented Features
 
-These are the Planned Features to get the game flowing and working properly, some of them are already in place and others are being implemented to the final report.
-
-- **Connected Menus** - The user has the capability of browsing through the different menus including in game ones. (Ex: Main Menu, Instructions, Play, Pause and Quit).
+- **Connected Menus** - The user has the capability of browsing through the different menus including in game ones. (Ex: Main Menu, Play, Pause and Quit).
 - **Buttons** - Functional and interactive buttons.
 - **Mouse and Keyboard control** - The mouse and keyboard inputs are received through the respective events and interpreted according to the current game state.
 - **Player control** - The player may move with the keyboard control and shoot his gun when space button is pressed.
-- **Collisions detection** - Collisions between different objects are verified. (Ex: Player Fire <->Enemies Fire, Collision between Player<->Enemie and Player <-> Obstacles).
+- **Collisions detection** - Collisions between different objects are verified. (Ex: Player Fire <->Enemies Fire, Player <-> Playground Limits).
 - **Different levels** - 5 different levels with an increasing difficulty were implemented.
-- **Animations** - Several animations are incorporated in this game, from enemies exploding to firing actions.
+- **Animations** - Several animations are incorporated in this game, from levels to firing actions.
 
-## Architectural Pattern
+## Planned Features
 
-### Problem in Context
+All the planned features were successfully implemented without major dificulties.
 
-Right from the begin of the development of the game we knew we had to separate in the correct way the different components from our code. In this way, we choose the MVC (Model - View - Controller) structure since it was the most natural for us to apply. In order to do this, we divided our code in three components:
+## Design
 
-- **Model:** Only represents the data.
-- **Controller:** Provides model data to the view and interprets user actions.
-- **View:** Displays the model data and sends user actions to the controller.
+### General Structure
+
+#### Problem in Context
+
+The first problem that our group has interested in solve is how the game would be structured. Since our game is dealing with a GUI and has many different states in game, we have some pattern that came to mind to fill that need in the best way.
 
 #### The Pattern
 
-> There are several interpretations of what constitutes a MVC architecture. The most important aspect is that the model represents the data and does nothing else. The model does not depend on the controller or the view. THe controller can either serve as union between the model and the view or just be a connection between user interaction and the model.
+Two main pattern were applied to the project, the **State Pattern** and the **Architetural Pattern**, the first is the behaviour design pattern that lets and object change its behaviour when has internal state changes. The second Pattern is the Model-View-Controller style which is commonly used in a GUI to make a game.
 
 #### Implementation
 
-![UML MVC](uml/ModelViewController.png);
+About the implementation, we have classes which main purpose is to store data(Model), classes that have control of the logic of the game (Controller) and classes that are responsible for the visual effects on the screen(View), these types of classes associate with each other in the following way:
+
+![MVC](uml/ModelViewController.png)
+*Fig 1 -> Model-View-Controller*
+
+With the different states of the game, all of them follow the Model-View-Controller style and allow the SpaceWars to modify its behaviour in a simple and effective way.
 
 #### Consequences
 
-- Increases the modularity of the code.
-- More easy to change only one component of the game, while still keeping the others (This code structure respects the Open-Close-Principle)
-- Allowed us to implement better testing to the components of the code.
-- Improved the organization of the code.
+- The several states in the game that manage different menus become explicit in the code despite of relying on flags to control
+- Easy to add new features in the development stage
+- A well organized code acknowledging the Single Responsibility Principle.
 
-## Design Patterns
-
-### Lanterna's complexity
+### Listeners and Observers
 
 #### Problem in Context
 
-The GUI framework used for this project has a lot of features that we do not use and that are complex. Our text-based SpaceWars game uses Lanterna and if we were to be using it's methods directly, the code would be more complex than needed, instead, we used a Design Pattern.
+Spacewars is controlled both by the mouse, which controls the menus, and the keyboard, that controls the spaceship and fires, for that many are the ways to receive input from these devices, in example: a thread that is running and every time it catches a signal it sends to the game itself (polling), the game being responsible for asking for input when needed, which is costly for our program since we may not send any signal to the program and unnecessary calls are made or the way we decided to implement which consists of using observers also known as listeners that are responsible for receiving the said input and redistributing it in a nicer and more usefull way to us. This takes some "weight" of the program as it will no longer need to be polling for input, as it will be properly warned when received.
 
 #### The Pattern
 
-The pattern used was a facade pattern. A facade provides a simplified interface to a complex framework with a deep set of classes.
+We applied in SpaceWars the **Observer Pattern** which is a behaviour design pattern that lets define a mechanism to notify multiple objects about any events that happen to the object they are observing. This pattern allowed us to solve the identified problems and apply a mechanism to receive the game input.
 
 #### Implementation
 
-![UML Lanterna](uml/Interface.png);
+In SpaceWars, we store the observers in the main class(Game Class) and change the state according to the input processed by the available listener. All listeners were always active, since when creating a MenuButton, the listener would be activate by the new created state.
 
-Classes used for this pattern :
->GUI
->LanternaGUI
+![OL](uml/ObserversListeners.png)
+*Fig 2 -> Observers Listeners*
 
 #### Consequences
 
-Using the Facade Pattern allows for the following:
+- Clean Code
+- Only the current game state is avised when input is given
+- Promotes the single responsibility principle.
 
-- Simple code from a complex system
-- Easier code readability
-- Better testability
-
-### Game loop
+### Level Builder 
 
 #### Problem in Context
 
-Our game's loop is always running during the game to draw images, to process input and to update the positions and states of each element. In order for the user input and processor speed to be independent we use a pattern that allows them to not block each other.
 
-#### The Pattern
 
-User input and processor speed are independent.
-A game loop is always running during the game, and each iteration the user input is processed without blocking the loop, updates the game and draws it.
 
-#### Implementation
 
-![UML LOOP](uml/Loop.png);
 
-#### Consequences
 
-- Game doesn't block user input
-- Frames are drawn consistently
-- Element attributes are updated consistently
-
-### Movement Command Pattern
-
-#### Problem in Context
-
-In order for the movement to be simple and not cause any unecessary complexity, we use the Command Pattern design which allows to encapsulate all information needed to perform an action.
-
-#### The Pattern
-
-The command pattern "is a behavioral design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event at a later time".
-
-#### Implementation 
-
-![UML MOVE](uml/Command.png)
-
-Classes used for this pattern :
-> Input handler
-> Direction movement
-
-#### Consequences
-
-- Simplifies user input to execute an action
-- Easy to implement middle operations between input and action
-- Separation from input and action
-
-### Button Command Pattern
-
-#### Problem in Context
-
-In the implementation of the Menus, their controllers have to interact with the model to change the game state, which causes a problem because they are not responsible to handle game states. So it was used the Command Pattern.
-
-#### The Pattern
-
-The command pattern "is a behavioral design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event at a later time".
-
-#### Implementation 
-
-![UML MOVE](uml/ButtonCommand.png)
-
->Button command
-
-#### Consequences
-
-- View controllers that invoke operations are independent from the objects that perform them.
-- Easy to add new buttons to a view with the encapsulation inside them.
