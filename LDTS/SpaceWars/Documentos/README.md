@@ -14,7 +14,7 @@ This project was developed by António Campelo(up201704987@up.pt), Edgar Louren�
 - **Mouse and Keyboard control** - The mouse and keyboard inputs are received through the respective events and interpreted according to the current game state.
 - **Player control** - The player may move with the keyboard control and shoot his gun when space button is pressed.
 - **Collisions detection** - Collisions between different objects are verified. (Ex: Player Fire <->Enemies Fire, Player <-> Playground Limits).
-- **Different levels** - 5 different levels with an increasing difficulty were implemented.
+- **Different levels** - 3 different levels with an increasing difficulty were implemented.
 - **Animations** - Several animations are incorporated in this game, from levels to firing actions.
 
 ## Planned Features
@@ -126,6 +126,44 @@ We have applied in SpaceWars the **Facade Pattern**, a simple interface to a com
 ![Lanterna](uml/Lanterna.png)
 *Fig 5 -> Lanterna Implementation*
 
+#### Consequences
+
+- Promotes testability and replaceability.
+- Expand lanterna functionalities as well as respecting the Interface Segregation Principle.
+- Isolate code from the complexity of a subsystem.
+
+## Known Code Smells and Refactoring Suggestions
+
+### Data Class
+
+All model classes are Data Classes, as they only contain fields and are *dumb classes*. This is caused by the **MVC** (Model-View-Controller) architetural pattern which has the responsability to the controller to implement the logic funcionalities of the model. This is not bad code smell because the reason to exists is because of the choosen pattern.
+
+### Feature envy and message chains
+
+In result of the **MVC** implementation some of the controllers use is narrowed to its method method calls. The controller in SpaceWars envies its model. In order to access a certain model's parameter it is mandatory to start by making a request to its controller
+
+### Large Class
+
+Some classes, like *Level*, *Game* or *Player* have many fields in them and others like the Interface of GUI contain many methods. In both cases, we find it justifiable because the classes required these fields in them, in one hand the Game class is the main class of the game and it stores a large amount of data, on the other hand various methods are needed for the interface and it wouldn't make sense to split them in two using extract method.
+
+### Alternative Classes and Lazy Classes
+
+We decided to generalize our **Enemy Class** and differenciate, the divergent characteristics. As this classes only differ in the values passed to the **Enemy Class** constructor and have no other significant functions they are an example of **Alternative Classes and Lazy Classes**.
+
+## Testing
+
+In the following figure we show the test with Coverage Report from the SpaceWars
+
+![Tests](tests/tests.png)
+*Fig 6 -> Tests of Code with Coverage*
+
+## Self-evaluation
+
+The work was divided in a mutual way and we all contributed with our best. It helped us to enrich our java and principle/pattern knwoledge, as well as our team work.
+
+- António Campelo : 1/3
+- Edgar Lourenço : 1/3
+- José Rodrigues : 1/3
 
 
 
