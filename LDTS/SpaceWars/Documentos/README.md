@@ -157,6 +157,11 @@ In the following figure we show the test with Coverage Report from the SpaceWars
 ![Tests](tests/tests.png)
 *Fig 6 -> Tests of Code with Coverage*
 
+## Pitest
+
+The mutation testing report can be found here : [Pitest](tests/index.html)
+
+
 ## Self-evaluation
 
 The work was divided in a mutual way and we all contributed with our best. It helped us to enrich our java and principle/pattern knwoledge, as well as our team work.
