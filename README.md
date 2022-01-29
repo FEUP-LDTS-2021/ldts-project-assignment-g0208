@@ -37,8 +37,58 @@ The Features all are implemented, despite of being a game simple to handle we im
 - [X] Multiple Levels
 
 ## Screenshots
+
 ### Game preview
+
+<p align="center" justify="center">
+  <img src="LDTS/SpaceWars/Documentos/screenshots/GamePreview.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 1. Game Preview </i></b>
+</p> 
+
+
 ### Menus
-### Levels
-### Animations
-### End Game
+
+<p align="center" justify="center">
+  <img src="LDTS/SpaceWars/Documentos/screenshots/MainMenu.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 2. Main Menu </i></b>
+</p>  
+
+### Loading Level
+
+<p align="center" justify="center">
+  <img src="LDTS/SpaceWars/Documentos/screenshots/LoadingScene.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 3. Loading Level </i></b>
+</p>  
+
+### Win Game
+
+<p align="center" justify="center">
+  <img src="LDTS/SpaceWars/Documentos/screenshots/WonScene.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 4. Win Game </i></b>
+</p>  
+
+### Lost Game
+
+<p align="center" justify="center">
+  <img src="LDTS/SpaceWars/Documentos/screenshots/LostScene.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 5. Lost Game </i></b>
+</p> 
+
+### Pause Menu
+
+<p align="center" justify="center">
+  <img src="LDTS/SpaceWars/Documentos/screenshots/PauseMenu.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 6. Pause Game </i></b>
+</p> 
