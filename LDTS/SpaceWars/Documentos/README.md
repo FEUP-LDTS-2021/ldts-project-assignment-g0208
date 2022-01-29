@@ -159,7 +159,7 @@ In the following figure we show the test with Coverage Report from the SpaceWars
 
 ## Pitest
 
-The mutation testing report can be found here : [Pitest](tests/index.html)
+The mutation testing report can be found here : [Pitest](tests/Pitest.png)
 
 
 ## Self-evaluation
